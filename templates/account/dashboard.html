@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+
+<div class="container my-4 overflow-hidden">
+  <div class="row gx-5">
+        <!-- Left Col -->
+        <div class="col">
+                <div class="py-3 shadow-sm bg-white text-center">
+                <u><i class="fw-regular fs-4">Profile:</i></u>
+                        <div class="d-flex justify-content-center">
+                                <img src="{{user.profile.photo.url}}" class="rounded-circle img-fluid shadow" alt="..." 
+                                style="object-fit: contain; height: 12rem; width: 12rem;">
+                        </div>
+                        <h6 class="display-6 mt-2">{{user.first_name}}</h6>
+                        <div class="d-block">
+                        <a class="btn btn-light shadow-sm" href="{% url 'edit' %}">edit your profile</a> 
+                        <a class="btn btn-danger shadow-sm mt-2" href="{% url 'password_change' %}">change password</a>.
+                        </div>
+                </div>
+        </div>
+    <!-- Right Col -->
+    <div class="col-9">
+      <div class="p-3 border bg-light">
+        
+        <h2>Successfully Ordered</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Item title</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order_item in order.items.all %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{order_item.item.title}}</td>
+          <td> {{order_item.get_total_discount_item_price}}<del>{{order_item.item.price}}</del> </td>
+          <td> {{ order_item.quantity }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5">You Have not Made any Other Yet</td>
+          <td colspan="4">
+            <a class="btn btn-info" href="{% url 'store:home' %}"> continue shoping </a>
+          </td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+                
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

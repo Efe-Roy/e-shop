@@ -1,0 +1,115 @@
+[
+  {
+    "stmt": "SELECT * FROM store_item;",
+    "header": [
+      "id",
+      "title",
+      "price",
+      "discount_price",
+      "category_id",
+      "label",
+      "slug",
+      "description",
+      "image",
+      "user_id"
+    ],
+    "rows": [
+      [
+        "1",
+        "Heizn By Nature",
+        "600.0",
+        "500.0",
+        "1",
+        "P",
+        "heize-by-nature",
+        "Nice Baby Yummy",
+        "static/img/products/q1.jpg",
+        "1"
+      ],
+      [
+        "2",
+        "Cereal MultiGrain",
+        "700.0",
+        "660.0",
+        "1",
+        "D",
+        "cereal-baby",
+        "Lovely Meal for baby",
+        "static/img/products/q2.webp",
+        "2"
+      ],
+      [
+        "3",
+        "Ferrari",
+        "3400.0",
+        "3350.0",
+        "3",
+        "D",
+        "ferrari",
+        "Amazing car from UK",
+        "static/img/products/q3.webp",
+        "1"
+      ],
+      [
+        "4",
+        "Toyota 2025",
+        "20000.0",
+        "17000.0",
+        "3",
+        "S",
+        "toyota",
+        "amazing car all from london",
+        "static/img/products/q4.webp",
+        "2"
+      ],
+      [
+        "5",
+        "Jean Top",
+        "34.0",
+        "NULL",
+        "2",
+        "P",
+        "jean-top",
+        "nice top jean",
+        "static/img/products/top.jpg",
+        "2"
+      ],
+      [
+        "6",
+        "Watch",
+        "60.0",
+        "NULL",
+        "5",
+        "D",
+        "watch",
+        "cool watch",
+        "static/img/products/watch.png",
+        "2"
+      ],
+      [
+        "7",
+        "Living Room",
+        "5000.0",
+        "4000.0",
+        "4",
+        "D",
+        "living-room-furniture",
+        "cool furniture beautiful",
+        "static/img/products/q6.webp",
+        "2"
+      ],
+      [
+        "8",
+        "Bed Room",
+        "5000.0",
+        "NULL",
+        "4",
+        "D",
+        "bedroom-furniture",
+        "bedroom furniture amazing",
+        "static/img/products/q5.jpg",
+        "1"
+      ]
+    ]
+  }
+]

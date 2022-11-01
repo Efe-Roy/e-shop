@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Edit your account{% endblock %}
+{% block content %}
+<div class="container">
+
+    <div class="text-center mt-3">
+        <h1>Edit your account</h1>
+        <p>You can edit your account using the following form:</p>
+    </div>
+    
+    <div class="row">
+        <div class="col d-flex justify-content-center py-3">
+            <form method="post" enctype="multipart/form-data" class="bg-white p-3">
+                {% csrf_token %}
+                <div class="form-group  my-4">
+                    <label for="id_first_name" class="form-label">First name:</label> 
+                    <input class="form-control" type="text" name="first_name" value="test first" maxlength="150" id="id_first_name">
+                </div>
+                <div class="form-group my-4">
+                    <label for="id_last_name">Last name:</label> 
+                    <input class="form-control" type="text" name="last_name" maxlength="150" id="id_last_name">
+                </div>
+                <div class="form-group my-4">
+                    <label for="id_email">Email address:</label> 
+                    <input class="form-control" type="email" name="email" value="test@gmail.com" maxlength="254" id="id_email">
+                </div>
+                <div class="form-group my-4">
+                    <label for="id_date_of_birth">Date of birth:</label> 
+                    <input class="form-control" type="text" name="date_of_birth" id="id_date_of_birth">
+                </div>
+                <div class="form-group my-4">
+                    <label for="id_photo" class="form-label">Photo:</label> 
+                    <br>
+                    Currently: <a href="/static/users/2022/10/29/qwe_JaZ3ljT.jpg">static/users/2022/10/29/qwe_JaZ3ljT.jpg</a>
+                    <input type="checkbox" name="photo-clear" id="photo-clear_id">
+                    <label for="photo-clear_id" class="form-label">Clear</label>
+                    <br>
+                    Change:
+                    <input type="file" name="photo" accept="image/*" id="id_photo" class="form-control">
+                </div>
+                <div>
+                    <input type="submit" value="Save changes" class="btn btn-primary mt-3">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
