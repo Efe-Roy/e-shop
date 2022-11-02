@@ -18,6 +18,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'shoppup.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
